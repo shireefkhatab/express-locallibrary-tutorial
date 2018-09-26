@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+  h1 Author: #{author.name}
+  p #{author.lifespan_formatted}
+  
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Books
+    
+    dl
+      each book in author_books
+        dt 
+          a(href=book.url) #{book.title}
+        dd #{book.summary}
+
+      else
+        p This author has no books.
+        
+    hr
+    button.btn.btn-primary
+      a(href=author.url+'/update' style="color:#fff;") Update Author
+    span &nbsp; &nbsp;     
+    button.btn.btn-warning
+      a(href=author.url+'/delete' style="color:#fff;") Delete Author
