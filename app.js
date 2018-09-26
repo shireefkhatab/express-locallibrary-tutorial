@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const mongoose = require('mongoose');
 var db = 'mongodb://localhost:27017/test';
 
-var db = process.env.MONGODB_URI || 'mongodb://reef:maryam15@ds041494.mlab.com:41494/locallibrary';
+var db = process.env.MONGODB_URI || 'mongodb://reefkh:maryam15@ds115523.mlab.com:15523/local-library-on-heroku';
 // mongoose.connect(db, { useNewUrlParser: true } ).then(() => {
 //   console.log('App is connected to database successfully');
 // }, (err) => {
